@@ -5,6 +5,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Card from 'react-bootstrap/Card';
+import Footer from './Footer'
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -31,7 +32,8 @@ export default function PortfolioContainer() {
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
-      <Card.Footer className="text-muted">Github, LinkedIn, StackOverflow</Card.Footer>
+      <Footer></Footer>
+      {/* <Card.Footer className="text-muted">Github, LinkedIn, StackOverflow</Card.Footer> */}
     </div>
   );
 }
