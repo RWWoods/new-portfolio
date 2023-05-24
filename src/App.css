@@ -8,6 +8,7 @@
 
 body {
   background-color: whitesmoke;
+  height: 100vh;
 }
 
 .bucket-app {

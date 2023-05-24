@@ -6,9 +6,10 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Card from 'react-bootstrap/Card';
 import Footer from './Footer'
+import Resume from './pages/Resume'
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('About');
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
@@ -20,6 +21,9 @@ export default function PortfolioContainer() {
     }
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />;
     }
     return <Contact />;
   };
